@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Using DOM</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+</head>
+<body>
+	<h1>Hey There</h1>
+	<h1 id="userName"></h1>
+
+	<h2 id="about"></h2>
+<script>
+	var user = prompt('Enter Name');
+	console.log(user);
+
+	var userCheck = prompt('Are You Interested in Exploring My Page ?');
+
+	var h1 = document.getElementById('userName');
+
+	if(userCheck.toLowerCase() == 'yes')
+		{
+				window.alert('You have ' + user.length+ " characters in " + user );
+				h1.innerHTML = 'Welcome to My Page '+ user + '!!!'+ "<br/>Let's Get It Started "
+	            document.body.style.backgroundColor = "yellow";
+		}
+
+		else{
+			   document.body.style.backgroundColor = "black";
+			   h1.innerHTML = 'Nothing To Show !!!, Come Back Some Other Time';
+			   h1.style.color = 'white';
+
+		}
+
+	//h1.innerHTML = 'Welcome to My Page '+ user + '!!!'+ "<br/>Let's Get It Started "
+	//document.body.style.backgroundColor = "yellow";
+
+</script>
+</body>
+</html>
